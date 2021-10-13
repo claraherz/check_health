@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace check_health.Views
 {
-    public partial class Form2 : Form
+    public partial class Consultas : Form
     {
-        public Form2()
+        public Consultas()
         {
             InitializeComponent();
         }

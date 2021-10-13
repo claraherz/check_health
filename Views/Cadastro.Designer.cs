@@ -1,7 +1,7 @@
 ﻿
 namespace check_health.Views
 {
-    partial class Form2
+    partial class Cadastro
     {
         /// <summary>
         /// Required designer variable.
