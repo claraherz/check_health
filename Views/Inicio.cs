@@ -35,16 +35,10 @@ namespace check_health
             new Consultas().Show();
             this.Hide();
         }
-
-        private void btnAgendamentos_Click(object sender, EventArgs e)
+        private void btnAgendamento_Click(object sender, EventArgs e)
         {
             new Agendamento().Show();
             this.Hide();
-        }
-
-        private void btnAgendamento_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
