@@ -1,4 +1,5 @@
-﻿using System;
+﻿using check_health.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace check_health
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
         }
     }
 }
