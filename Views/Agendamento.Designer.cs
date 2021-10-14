@@ -135,15 +135,15 @@ namespace check_health.Views
             // 
             this.button2.Location = new System.Drawing.Point(26, 34);
             this.button2.Name = "button2";
-<<<<<<< HEAD
+
             this.button2.Size = new System.Drawing.Size(79, 40);
             this.button2.TabIndex = 9;
             this.button2.Text = "X";
-=======
+
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
             this.button2.Text = "button2";
->>>>>>> ec6b452b151d6e02b27c0fff2cb53e100b1d7a40
+
             this.button2.UseVisualStyleBackColor = true;
             // 
             // Agendamento
