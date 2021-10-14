@@ -117,7 +117,11 @@ namespace check_health
 
         private void btnAgendamento_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             abrirChildForm(new Agendamento());
+=======
+            //*abre outro form*
+>>>>>>> ec6b452b151d6e02b27c0fff2cb53e100b1d7a40
             esconderSubMenu();
         }
         #endregion

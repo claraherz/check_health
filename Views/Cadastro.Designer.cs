@@ -53,7 +53,11 @@ namespace check_health.Views
             // textboxEmail
             // 
             this.textboxEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+<<<<<<< HEAD
             this.textboxEmail.Location = new System.Drawing.Point(215, 251);
+=======
+            this.textboxEmail.Location = new System.Drawing.Point(207, 232);
+>>>>>>> ec6b452b151d6e02b27c0fff2cb53e100b1d7a40
             this.textboxEmail.Margin = new System.Windows.Forms.Padding(4);
             this.textboxEmail.Name = "textboxEmail";
             this.textboxEmail.Size = new System.Drawing.Size(235, 23);
@@ -62,7 +66,11 @@ namespace check_health.Views
             // textboxSenha
             // 
             this.textboxSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+<<<<<<< HEAD
             this.textboxSenha.Location = new System.Drawing.Point(215, 328);
+=======
+            this.textboxSenha.Location = new System.Drawing.Point(207, 309);
+>>>>>>> ec6b452b151d6e02b27c0fff2cb53e100b1d7a40
             this.textboxSenha.Margin = new System.Windows.Forms.Padding(4);
             this.textboxSenha.Name = "textboxSenha";
             this.textboxSenha.PasswordChar = '*';
@@ -72,7 +80,11 @@ namespace check_health.Views
             // btnLogin
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+<<<<<<< HEAD
             this.btnLogin.Location = new System.Drawing.Point(273, 386);
+=======
+            this.btnLogin.Location = new System.Drawing.Point(265, 367);
+>>>>>>> ec6b452b151d6e02b27c0fff2cb53e100b1d7a40
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(108, 36);
@@ -83,7 +95,11 @@ namespace check_health.Views
             // textboxNome
             // 
             this.textboxNome.Anchor = System.Windows.Forms.AnchorStyles.None;
+<<<<<<< HEAD
             this.textboxNome.Location = new System.Drawing.Point(215, 173);
+=======
+            this.textboxNome.Location = new System.Drawing.Point(207, 150);
+>>>>>>> ec6b452b151d6e02b27c0fff2cb53e100b1d7a40
             this.textboxNome.Margin = new System.Windows.Forms.Padding(4);
             this.textboxNome.Name = "textboxNome";
             this.textboxNome.Size = new System.Drawing.Size(235, 23);
@@ -93,7 +109,11 @@ namespace check_health.Views
             // 
             this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNome.AutoSize = true;
+<<<<<<< HEAD
             this.lblNome.Location = new System.Drawing.Point(306, 128);
+=======
+            this.lblNome.Location = new System.Drawing.Point(301, 102);
+>>>>>>> ec6b452b151d6e02b27c0fff2cb53e100b1d7a40
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(45, 17);
             this.lblNome.TabIndex = 9;
@@ -103,7 +123,11 @@ namespace check_health.Views
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
+<<<<<<< HEAD
             this.lblEmail.Location = new System.Drawing.Point(309, 215);
+=======
+            this.lblEmail.Location = new System.Drawing.Point(301, 196);
+>>>>>>> ec6b452b151d6e02b27c0fff2cb53e100b1d7a40
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(42, 17);
             this.lblEmail.TabIndex = 10;
@@ -113,7 +137,11 @@ namespace check_health.Views
             // 
             this.lblSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSenha.AutoSize = true;
+<<<<<<< HEAD
             this.lblSenha.Location = new System.Drawing.Point(309, 289);
+=======
+            this.lblSenha.Location = new System.Drawing.Point(301, 270);
+>>>>>>> ec6b452b151d6e02b27c0fff2cb53e100b1d7a40
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(49, 17);
             this.lblSenha.TabIndex = 11;
@@ -124,7 +152,11 @@ namespace check_health.Views
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(684, 561);
+=======
+            this.ClientSize = new System.Drawing.Size(668, 522);
+>>>>>>> ec6b452b151d6e02b27c0fff2cb53e100b1d7a40
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblNome);
@@ -134,7 +166,10 @@ namespace check_health.Views
             this.Controls.Add(this.textboxSenha);
             this.Controls.Add(this.btnLogin);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+=======
+>>>>>>> ec6b452b151d6e02b27c0fff2cb53e100b1d7a40
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cadastro";
             this.Text = "Form2";

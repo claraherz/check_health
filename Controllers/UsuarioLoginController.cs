@@ -1,11 +1,11 @@
-﻿using Check.Health.Models;
-using Check.Health.Models.ModelCadastroeLogin;
+﻿using check_health.Models;
+using check_health.Models.ModelCadastroeLogin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Check.Health.Controllers
+namespace check_health.Controllers
 {
     public class UsuarioLoginController
     {
