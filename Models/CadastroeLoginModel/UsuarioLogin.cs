@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Check.Health.Models.ModelCadastroeLogin
+namespace check_health.Models.ModelCadastroeLogin
 {
     public class UsuarioLogin
     {
