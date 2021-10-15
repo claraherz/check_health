@@ -17,7 +17,7 @@ namespace check_health.Views
             InitializeComponent();
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+        private void btnInicio_Click(object sender, EventArgs e)
         {
             this.Close();
         }
