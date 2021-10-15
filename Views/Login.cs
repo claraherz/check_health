@@ -21,5 +21,21 @@ namespace check_health.Views
         {
             this.Close();
         }
+        
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            UsuarioLogin user = new UsuarioLogin();
+            Controller.LoginDados(textboxEmail.Text, textboxSenha.Text, out user);
+
+            if (user.idPaciente != 0)
+            {
+                new Agendamento().Show();
+                this.Hide();
+            }
+            else
+            {
+                Application.Exit();
+            }
+        }
     }
 }
