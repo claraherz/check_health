@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace check_health.Views
 {
-    public partial class Cadastro : Form
+    public partial class QuemSomos : Form
     {
-        public Cadastro()
+        public QuemSomos()
         {
             InitializeComponent();
-        }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

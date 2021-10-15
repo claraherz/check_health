@@ -68,7 +68,7 @@ namespace check_health
 
         private void btnQuemSomos_Click(object sender, EventArgs e)
         {
-            //*abre outro form*
+            abrirChildForm(new QuemSomos());
             esconderSubMenu();
         }
 
@@ -80,7 +80,7 @@ namespace check_health
 
         private void btnFaleConosco_Click(object sender, EventArgs e)
         {
-            //*abre outro form*
+            abrirChildForm(new FaleConosco());
             esconderSubMenu();
         }
 

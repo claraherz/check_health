@@ -38,7 +38,6 @@ namespace check_health
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnPaciente = new System.Windows.Forms.Button();
             this.painelSobreNos = new System.Windows.Forms.Panel();
-            this.btnPrivacidade = new System.Windows.Forms.Button();
             this.btnFaleConosco = new System.Windows.Forms.Button();
             this.btnColaboradores = new System.Windows.Forms.Button();
             this.btnQuemSomos = new System.Windows.Forms.Button();
@@ -79,9 +78,9 @@ namespace check_health
             this.painelPaciente.Controls.Add(this.btnCadastro);
             this.painelPaciente.Controls.Add(this.btnLogin);
             this.painelPaciente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelPaciente.Location = new System.Drawing.Point(0, 423);
+            this.painelPaciente.Location = new System.Drawing.Point(0, 401);
             this.painelPaciente.Name = "painelPaciente";
-            this.painelPaciente.Size = new System.Drawing.Size(233, 180);
+            this.painelPaciente.Size = new System.Drawing.Size(233, 191);
             this.painelPaciente.TabIndex = 3;
             // 
             // btnAgendamento
@@ -89,11 +88,12 @@ namespace check_health
             this.btnAgendamento.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgendamento.FlatAppearance.BorderSize = 0;
             this.btnAgendamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgendamento.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgendamento.ForeColor = System.Drawing.Color.White;
-            this.btnAgendamento.Location = new System.Drawing.Point(0, 135);
+            this.btnAgendamento.Location = new System.Drawing.Point(0, 144);
             this.btnAgendamento.Name = "btnAgendamento";
             this.btnAgendamento.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnAgendamento.Size = new System.Drawing.Size(233, 45);
+            this.btnAgendamento.Size = new System.Drawing.Size(233, 48);
             this.btnAgendamento.TabIndex = 4;
             this.btnAgendamento.Text = "Agendamento";
             this.btnAgendamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -105,11 +105,12 @@ namespace check_health
             this.btnConsultas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnConsultas.FlatAppearance.BorderSize = 0;
             this.btnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultas.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultas.ForeColor = System.Drawing.Color.White;
-            this.btnConsultas.Location = new System.Drawing.Point(0, 90);
+            this.btnConsultas.Location = new System.Drawing.Point(0, 96);
             this.btnConsultas.Name = "btnConsultas";
             this.btnConsultas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnConsultas.Size = new System.Drawing.Size(233, 45);
+            this.btnConsultas.Size = new System.Drawing.Size(233, 48);
             this.btnConsultas.TabIndex = 3;
             this.btnConsultas.Text = "Consultas";
             this.btnConsultas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,11 +122,12 @@ namespace check_health
             this.btnCadastro.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCadastro.FlatAppearance.BorderSize = 0;
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastro.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.Color.White;
-            this.btnCadastro.Location = new System.Drawing.Point(0, 45);
+            this.btnCadastro.Location = new System.Drawing.Point(0, 48);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCadastro.Size = new System.Drawing.Size(233, 45);
+            this.btnCadastro.Size = new System.Drawing.Size(233, 48);
             this.btnCadastro.TabIndex = 2;
             this.btnCadastro.Text = "Cadastro";
             this.btnCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,11 +139,12 @@ namespace check_health
             this.btnLogin.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(0, 0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnLogin.Size = new System.Drawing.Size(233, 45);
+            this.btnLogin.Size = new System.Drawing.Size(233, 48);
             this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "Login";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,11 +156,12 @@ namespace check_health
             this.btnPaciente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPaciente.FlatAppearance.BorderSize = 0;
             this.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaciente.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaciente.ForeColor = System.Drawing.Color.White;
-            this.btnPaciente.Location = new System.Drawing.Point(0, 378);
+            this.btnPaciente.Location = new System.Drawing.Point(0, 353);
             this.btnPaciente.Name = "btnPaciente";
             this.btnPaciente.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnPaciente.Size = new System.Drawing.Size(233, 45);
+            this.btnPaciente.Size = new System.Drawing.Size(233, 48);
             this.btnPaciente.TabIndex = 2;
             this.btnPaciente.Text = "Paciente";
             this.btnPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -167,42 +171,26 @@ namespace check_health
             // painelSobreNos
             // 
             this.painelSobreNos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(217)))), ((int)(((byte)(138)))));
-            this.painelSobreNos.Controls.Add(this.btnPrivacidade);
             this.painelSobreNos.Controls.Add(this.btnFaleConosco);
             this.painelSobreNos.Controls.Add(this.btnColaboradores);
             this.painelSobreNos.Controls.Add(this.btnQuemSomos);
             this.painelSobreNos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelSobreNos.Location = new System.Drawing.Point(0, 198);
+            this.painelSobreNos.Location = new System.Drawing.Point(0, 211);
             this.painelSobreNos.Name = "painelSobreNos";
-            this.painelSobreNos.Size = new System.Drawing.Size(233, 180);
+            this.painelSobreNos.Size = new System.Drawing.Size(233, 142);
             this.painelSobreNos.TabIndex = 1;
-            // 
-            // btnPrivacidade
-            // 
-            this.btnPrivacidade.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPrivacidade.FlatAppearance.BorderSize = 0;
-            this.btnPrivacidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrivacidade.ForeColor = System.Drawing.Color.White;
-            this.btnPrivacidade.Location = new System.Drawing.Point(0, 135);
-            this.btnPrivacidade.Name = "btnPrivacidade";
-            this.btnPrivacidade.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnPrivacidade.Size = new System.Drawing.Size(233, 45);
-            this.btnPrivacidade.TabIndex = 3;
-            this.btnPrivacidade.Text = "Privacidade";
-            this.btnPrivacidade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrivacidade.UseVisualStyleBackColor = true;
-            this.btnPrivacidade.Click += new System.EventHandler(this.btnPrivacidade_Click);
             // 
             // btnFaleConosco
             // 
             this.btnFaleConosco.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFaleConosco.FlatAppearance.BorderSize = 0;
             this.btnFaleConosco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFaleConosco.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFaleConosco.ForeColor = System.Drawing.Color.White;
-            this.btnFaleConosco.Location = new System.Drawing.Point(0, 90);
+            this.btnFaleConosco.Location = new System.Drawing.Point(0, 96);
             this.btnFaleConosco.Name = "btnFaleConosco";
             this.btnFaleConosco.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnFaleConosco.Size = new System.Drawing.Size(233, 45);
+            this.btnFaleConosco.Size = new System.Drawing.Size(233, 48);
             this.btnFaleConosco.TabIndex = 2;
             this.btnFaleConosco.Text = "Fale conosco";
             this.btnFaleConosco.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,11 +202,12 @@ namespace check_health
             this.btnColaboradores.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnColaboradores.FlatAppearance.BorderSize = 0;
             this.btnColaboradores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColaboradores.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnColaboradores.ForeColor = System.Drawing.Color.White;
-            this.btnColaboradores.Location = new System.Drawing.Point(0, 45);
+            this.btnColaboradores.Location = new System.Drawing.Point(0, 48);
             this.btnColaboradores.Name = "btnColaboradores";
             this.btnColaboradores.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnColaboradores.Size = new System.Drawing.Size(233, 45);
+            this.btnColaboradores.Size = new System.Drawing.Size(233, 48);
             this.btnColaboradores.TabIndex = 1;
             this.btnColaboradores.Text = "Colaboradores";
             this.btnColaboradores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,11 +219,12 @@ namespace check_health
             this.btnQuemSomos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQuemSomos.FlatAppearance.BorderSize = 0;
             this.btnQuemSomos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuemSomos.Font = new System.Drawing.Font("Century Gothic", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuemSomos.ForeColor = System.Drawing.Color.White;
             this.btnQuemSomos.Location = new System.Drawing.Point(0, 0);
             this.btnQuemSomos.Name = "btnQuemSomos";
             this.btnQuemSomos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnQuemSomos.Size = new System.Drawing.Size(233, 45);
+            this.btnQuemSomos.Size = new System.Drawing.Size(233, 48);
             this.btnQuemSomos.TabIndex = 0;
             this.btnQuemSomos.Text = "Quem somos?";
             this.btnQuemSomos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,11 +236,12 @@ namespace check_health
             this.btnSobreNos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSobreNos.FlatAppearance.BorderSize = 0;
             this.btnSobreNos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSobreNos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSobreNos.ForeColor = System.Drawing.Color.White;
-            this.btnSobreNos.Location = new System.Drawing.Point(0, 153);
+            this.btnSobreNos.Location = new System.Drawing.Point(0, 163);
             this.btnSobreNos.Name = "btnSobreNos";
             this.btnSobreNos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnSobreNos.Size = new System.Drawing.Size(233, 45);
+            this.btnSobreNos.Size = new System.Drawing.Size(233, 48);
             this.btnSobreNos.TabIndex = 1;
             this.btnSobreNos.Text = "Sobre Nós";
             this.btnSobreNos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -263,7 +254,7 @@ namespace check_health
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(233, 153);
+            this.panelLogo.Size = new System.Drawing.Size(233, 163);
             this.panelLogo.TabIndex = 1;
             // 
             // picLogo
@@ -271,7 +262,7 @@ namespace check_health
             this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picLogo.Location = new System.Drawing.Point(0, 0);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(233, 153);
+            this.picLogo.Size = new System.Drawing.Size(233, 163);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
@@ -288,23 +279,23 @@ namespace check_health
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(99, 97);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 350);
+            this.pictureBox1.Size = new System.Drawing.Size(684, 561);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // FormCheckHealth
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 561);
             this.Controls.Add(this.painelChildForm);
             this.Controls.Add(this.painelLateral);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "FormCheckHealth";
@@ -336,7 +327,6 @@ namespace check_health
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnPaciente;
-        private System.Windows.Forms.Button btnPrivacidade;
         private System.Windows.Forms.Panel painelChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

@@ -29,164 +29,199 @@ namespace check_health.Views
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.textboxEmail = new System.Windows.Forms.TextBox();
-            this.textboxSenha = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.textboxNome = new System.Windows.Forms.TextBox();
+            this.lblCadastrar = new System.Windows.Forms.Label();
+            this.painelNome = new System.Windows.Forms.Panel();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
+            this.painelEmail = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.painelSenha = new System.Windows.Forms.Panel();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnInicio = new System.Windows.Forms.Button();
+            this.painelNome.SuspendLayout();
+            this.painelEmail.SuspendLayout();
+            this.painelSenha.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnFechar
+            // lblCadastrar
             // 
-            this.btnFechar.Location = new System.Drawing.Point(18, 19);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(67, 36);
-            this.btnFechar.TabIndex = 7;
-            this.btnFechar.Text = "X";
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.lblCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCadastrar.AutoSize = true;
+            this.lblCadastrar.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(156)))), ((int)(((byte)(111)))));
+            this.lblCadastrar.Location = new System.Drawing.Point(12, 106);
+            this.lblCadastrar.Name = "lblCadastrar";
+            this.lblCadastrar.Size = new System.Drawing.Size(321, 33);
+            this.lblCadastrar.TabIndex = 13;
+            this.lblCadastrar.Text = "Cadastrar novo usuário";
             // 
-            // textboxEmail
+            // painelNome
             // 
-            this.textboxEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-
-            this.textboxEmail.Location = new System.Drawing.Point(215, 251);
-
-            this.textboxEmail.Location = new System.Drawing.Point(207, 232);
-
-            this.textboxEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.textboxEmail.Name = "textboxEmail";
-            this.textboxEmail.Size = new System.Drawing.Size(235, 23);
-            this.textboxEmail.TabIndex = 6;
+            this.painelNome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.painelNome.BackColor = System.Drawing.Color.Snow;
+            this.painelNome.Controls.Add(this.txtNome);
+            this.painelNome.Controls.Add(this.lblNome);
+            this.painelNome.Location = new System.Drawing.Point(-1, 159);
+            this.painelNome.Name = "painelNome";
+            this.painelNome.Size = new System.Drawing.Size(682, 45);
+            this.painelNome.TabIndex = 20;
             // 
-            // textboxSenha
+            // txtNome
             // 
-            this.textboxSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-
-            this.textboxSenha.Location = new System.Drawing.Point(215, 328);
-
-            this.textboxSenha.Location = new System.Drawing.Point(207, 309);
-
-            this.textboxSenha.Margin = new System.Windows.Forms.Padding(4);
-            this.textboxSenha.Name = "textboxSenha";
-            this.textboxSenha.PasswordChar = '*';
-            this.textboxSenha.Size = new System.Drawing.Size(235, 23);
-            this.textboxSenha.TabIndex = 5;
+            this.txtNome.BackColor = System.Drawing.Color.Snow;
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNome.Location = new System.Drawing.Point(70, 15);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(608, 17);
+            this.txtNome.TabIndex = 2;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(156)))), ((int)(((byte)(111)))));
+            this.lblNome.Location = new System.Drawing.Point(3, 11);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(61, 21);
+            this.lblNome.TabIndex = 1;
+            this.lblNome.Text = "Nome:";
+            // 
+            // painelEmail
+            // 
+            this.painelEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.painelEmail.BackColor = System.Drawing.Color.Snow;
+            this.painelEmail.Controls.Add(this.txtEmail);
+            this.painelEmail.Controls.Add(this.lblEmail);
+            this.painelEmail.Location = new System.Drawing.Point(-1, 210);
+            this.painelEmail.Name = "painelEmail";
+            this.painelEmail.Size = new System.Drawing.Size(682, 45);
+            this.painelEmail.TabIndex = 21;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.Snow;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Location = new System.Drawing.Point(70, 14);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(608, 17);
+            this.txtEmail.TabIndex = 3;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(156)))), ((int)(((byte)(111)))));
+            this.lblEmail.Location = new System.Drawing.Point(9, 10);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(55, 21);
+            this.lblEmail.TabIndex = 2;
+            this.lblEmail.Text = "Email:";
+            // 
+            // painelSenha
+            // 
+            this.painelSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.painelSenha.BackColor = System.Drawing.Color.Snow;
+            this.painelSenha.Controls.Add(this.txtSenha);
+            this.painelSenha.Controls.Add(this.lblSenha);
+            this.painelSenha.Location = new System.Drawing.Point(-1, 261);
+            this.painelSenha.Name = "painelSenha";
+            this.painelSenha.Size = new System.Drawing.Size(682, 45);
+            this.painelSenha.TabIndex = 21;
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.BackColor = System.Drawing.Color.Snow;
+            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSenha.Location = new System.Drawing.Point(70, 15);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(608, 17);
+            this.txtSenha.TabIndex = 4;
+            this.txtSenha.UseSystemPasswordChar = true;
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(156)))), ((int)(((byte)(111)))));
+            this.lblSenha.Location = new System.Drawing.Point(3, 11);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(63, 21);
+            this.lblSenha.TabIndex = 3;
+            this.lblSenha.Text = "Senha:";
             // 
             // btnLogin
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-
-            this.btnLogin.Location = new System.Drawing.Point(273, 386);
-
-            this.btnLogin.Location = new System.Drawing.Point(265, 367);
-
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(156)))), ((int)(((byte)(111)))));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(17, 330);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(108, 36);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Entrar";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Size = new System.Drawing.Size(149, 45);
+            this.btnLogin.TabIndex = 22;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseVisualStyleBackColor = false;
             // 
-            // textboxNome
+            // btnInicio
             // 
-            this.textboxNome.Anchor = System.Windows.Forms.AnchorStyles.None;
-
-            this.textboxNome.Location = new System.Drawing.Point(215, 173);
-
-            this.textboxNome.Location = new System.Drawing.Point(207, 150);
-
-            this.textboxNome.Margin = new System.Windows.Forms.Padding(4);
-            this.textboxNome.Name = "textboxNome";
-            this.textboxNome.Size = new System.Drawing.Size(235, 23);
-            this.textboxNome.TabIndex = 8;
-            // 
-            // lblNome
-            // 
-            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNome.AutoSize = true;
-
-            this.lblNome.Location = new System.Drawing.Point(306, 128);
-
-            this.lblNome.Location = new System.Drawing.Point(301, 102);
-
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(45, 17);
-            this.lblNome.TabIndex = 9;
-            this.lblNome.Text = "Nome";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblEmail.AutoSize = true;
-
-            this.lblEmail.Location = new System.Drawing.Point(309, 215);
-
-            this.lblEmail.Location = new System.Drawing.Point(301, 196);
-
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(42, 17);
-            this.lblEmail.TabIndex = 10;
-            this.lblEmail.Text = "Email";
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSenha.AutoSize = true;
-
-            this.lblSenha.Location = new System.Drawing.Point(309, 289);
-
-            this.lblSenha.Location = new System.Drawing.Point(301, 270);
-
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(49, 17);
-            this.lblSenha.TabIndex = 11;
-            this.lblSenha.Text = "Senha";
+            this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(156)))), ((int)(((byte)(111)))));
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.ForeColor = System.Drawing.Color.White;
+            this.btnInicio.Location = new System.Drawing.Point(-1, -1);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(5);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(75, 37);
+            this.btnInicio.TabIndex = 23;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // Cadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-
             this.ClientSize = new System.Drawing.Size(684, 561);
-
-            this.ClientSize = new System.Drawing.Size(668, 522);
-
-            this.Controls.Add(this.lblSenha);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.textboxNome);
-            this.Controls.Add(this.btnFechar);
-            this.Controls.Add(this.textboxEmail);
-            this.Controls.Add(this.textboxSenha);
+            this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.btnLogin);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
+            this.Controls.Add(this.painelEmail);
+            this.Controls.Add(this.painelSenha);
+            this.Controls.Add(this.painelNome);
+            this.Controls.Add(this.lblCadastrar);
+            this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-
-
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cadastro";
             this.Text = "Form2";
+            this.painelNome.ResumeLayout(false);
+            this.painelNome.PerformLayout();
+            this.painelEmail.ResumeLayout(false);
+            this.painelEmail.PerformLayout();
+            this.painelSenha.ResumeLayout(false);
+            this.painelSenha.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.TextBox textboxEmail;
-        private System.Windows.Forms.TextBox textboxSenha;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox textboxNome;
+        private System.Windows.Forms.Label lblCadastrar;
+        private System.Windows.Forms.Panel painelNome;
+        private System.Windows.Forms.Panel painelEmail;
+        private System.Windows.Forms.Panel painelSenha;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.Button btnInicio;
     }
 }
