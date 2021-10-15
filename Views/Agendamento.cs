@@ -10,14 +10,25 @@ namespace check_health.Views
             InitializeComponent();
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
+        private void Agendamento_Load(object sender, EventArgs e)
         {
-            this.Close();
+            List<string> especialidade = new List<string>();
+            Controller.EspecialiadeController(especialidade);
+            foreach (var item in especialidade)
+            {
+                comboBoxEspecialidade.Items.Add(item);
+            }
         }
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        private void comboBoxEspecialidade_SelectedIndexChanged(object sender, EventArgs e)
         {
+            List<string> medico = new List<string>();
+            Controller.MedicoController(comboBoxEspecialidade.Text, medico);
 
+            foreach (var item in medico)
+            {
+                comboBoxProfissional.Items.Add(item);
+            }
         }
     }
 }
