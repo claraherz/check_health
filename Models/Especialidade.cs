@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NPOI.SS.Formula.Functions;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -40,12 +41,38 @@ namespace check_health.Models
                 ConnectionString.Connection.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
 
-
-
                 while (dr.Read())
                 {
-                    nome.Add(dr[1].ToString());
+                    nome.Add(dr[0].ToString());
                 }
+                
+                return new Response
+                {
+                    Executed = true
+                };
+
+            }
+            catch (Exception e)
+            {
+                return ExceptionGet(e);
+            }
+        }
+
+        public static Response EspecialidadeSelect(List<string> especialidade)
+        {
+            string select = $"SELECT Especialidade from dbo.Medico";
+            SqlCommand cmd = new SqlCommand(select, ConnectionString.Connection);
+
+            try
+            {
+                ConnectionString.Connection.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    especialidade.Add(dr[0].ToString());
+                }
+                ConnectionString.Connection.Close();
+
                 return new Response
                 {
                     Executed = true
