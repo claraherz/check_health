@@ -12,53 +12,24 @@ namespace check_health.Views
             InitializeComponent();
         }
 
-        private void Agendamento_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void comboBoxEspecialidade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            List<string> medico = new List<string>();
-            Controller.MedicoController(comboBoxEspecialidade.Text, medico);
-
-            foreach (var item in medico)
-            {
-                comboBoxProfissional.Items.Add(item);
-            }
-        }
-
         private void btnConfirma_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void comboBoxData_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            List<string> hora = new List<string>();
-            Controller.HoraConsulta(hora);
-
-            foreach (var item in hora)
-            {
-                comboBoxHorario.Items.Add(item);
-            }
-
+            this.Close();
         }
 
         private void calendario_ValueChanged(object sender, EventArgs e)
         {
             List<string> hora = new List<string>();
+            
             Controller.HoraConsulta(hora);
             foreach (var item in hora)
             {
                 comboBoxHorario.Items.Add(item);
             }
-
-            
         }
 
         private void Agendamento_Load_1(object sender, EventArgs e)
@@ -70,6 +41,22 @@ namespace check_health.Views
                 comboBoxEspecialidade.Items.Add(item);
             }
 
+        }
+
+        private void comboBoxEspecialidade_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            List<string> nome = new List<string>();
+            Controller.MedicoController(comboBoxEspecialidade.Text, nome);
+
+            foreach (var item in nome)
+            {
+                comboBoxProfissional.Items.Add(item);
+            }
+        }
+
+        private void comboBoxHorario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

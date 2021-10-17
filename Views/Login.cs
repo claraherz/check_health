@@ -23,8 +23,8 @@ namespace check_health.Views
         {
             this.Close();
         }
-        
-        private void btnLogin_Click(object sender, EventArgs e)
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             UsuarioLogin user = new UsuarioLogin();
             Controller.LoginDados(txtEmail.Text, txtSenha.Text, out user);
@@ -36,7 +36,7 @@ namespace check_health.Views
             }
             else
             {
-                Application.Exit();
+                MessageBox.Show("E-mail ou Senha incorreta");
             }
         }
     }
