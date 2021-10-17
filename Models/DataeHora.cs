@@ -10,6 +10,7 @@ namespace check_health.Models
     {
         public static void HoraConsulta(List<string> hora)
         {
+
             hora.Add("9h00");
             hora.Add("10h00");
             hora.Add("11h00");
