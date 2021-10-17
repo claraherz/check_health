@@ -83,6 +83,10 @@ namespace check_health.Controllers
             EspecialidadeModel.MedicoSelect(especialidade, nome);
         }
 
+        public static void HoraConsulta(List<string> hora)
+        {
+            DataeHora.HoraConsulta(hora);
+        }
 
     }
 }

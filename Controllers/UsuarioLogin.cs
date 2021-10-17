@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using check_health.Models;
 
-namespace check_health.Controllers
+namespace check_health.Models.ModelCadastroeLogin
 {
     public class UsuarioLogin
     {
