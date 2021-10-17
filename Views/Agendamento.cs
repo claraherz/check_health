@@ -1,4 +1,6 @@
-﻿using System;
+﻿using check_health.Controllers;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace check_health.Views
@@ -12,12 +14,6 @@ namespace check_health.Views
 
         private void Agendamento_Load(object sender, EventArgs e)
         {
-            List<string> especialidade = new List<string>();
-            Controller.EspecialiadeController(especialidade);
-            foreach (var item in especialidade)
-            {
-                comboBoxEspecialidade.Items.Add(item);
-            }
         }
 
         private void comboBoxEspecialidade_SelectedIndexChanged(object sender, EventArgs e)
@@ -29,6 +25,51 @@ namespace check_health.Views
             {
                 comboBoxProfissional.Items.Add(item);
             }
+        }
+
+        private void btnConfirma_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxData_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<string> hora = new List<string>();
+            Controller.HoraConsulta(hora);
+
+            foreach (var item in hora)
+            {
+                comboBoxHorario.Items.Add(item);
+            }
+
+        }
+
+        private void calendario_ValueChanged(object sender, EventArgs e)
+        {
+            List<string> hora = new List<string>();
+            Controller.HoraConsulta(hora);
+            foreach (var item in hora)
+            {
+                comboBoxHorario.Items.Add(item);
+            }
+
+            
+        }
+
+        private void Agendamento_Load_1(object sender, EventArgs e)
+        {
+            List<string> especialidade = new List<string>();
+            Controller.EspecialiadeController(especialidade);
+            foreach (var item in especialidade)
+            {
+                comboBoxEspecialidade.Items.Add(item);
+            }
+
         }
     }
 }

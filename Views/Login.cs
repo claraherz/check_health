@@ -1,4 +1,6 @@
-﻿using System;
+﻿using check_health.Controllers;
+using check_health.Models.ModelCadastroeLogin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +27,7 @@ namespace check_health.Views
         private void btnLogin_Click(object sender, EventArgs e)
         {
             UsuarioLogin user = new UsuarioLogin();
-            Controller.LoginDados(textboxEmail.Text, textboxSenha.Text, out user);
+            Controller.LoginDados(txtEmail.Text, txtSenha.Text, out user);
 
             if (user.idPaciente != 0)
             {

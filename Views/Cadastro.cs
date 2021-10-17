@@ -1,4 +1,5 @@
-﻿using System;
+﻿using check_health.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,7 @@ namespace check_health.Views
         
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Controller.CadastroDados(textboxNome.Text, textboxEmail.Text, textboxSenha.Text);
+            Controller.CadastroDados(txtNome.Text, txtEmail.Text, txtSenha.Text);
 
             new Agendamento().Show();
             this.Hide();
