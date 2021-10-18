@@ -22,12 +22,11 @@ namespace check_health.Views
         {
             this.Close();
         }
-
-        private void btnCadastro_Click_1(object sender, EventArgs e)
+        private void btnCadastrar_Click_1(object sender, EventArgs e)
         {
             Controller.CadastroDados(txtNome.Text, txtEmail.Text, txtSenha.Text);
 
-            new Agendamento().Show();
+            MessageBox.Show("Cadastro Efetuado");
             this.Hide();
         }
     }

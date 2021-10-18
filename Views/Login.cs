@@ -24,14 +24,14 @@ namespace check_health.Views
             this.Close();
         }
 
-        private void btnLogin_Click_1(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             UsuarioLogin user = new UsuarioLogin();
             Controller.LoginDados(txtEmail.Text, txtSenha.Text, out user);
 
             if (user.idPaciente != 0)
             {
-                new Agendamento().Show();
+                MessageBox.Show("Login Efetuado");
                 this.Hide();
             }
             else

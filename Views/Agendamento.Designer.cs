@@ -1,5 +1,4 @@
-﻿
-namespace check_health.Views
+﻿namespace check_health.Views
 {
     partial class Agendamento
     {
@@ -148,7 +147,6 @@ namespace check_health.Views
             this.btnConfirmar.TabIndex = 8;
             this.btnConfirmar.Text = "Confirmar consulta";
             this.btnConfirmar.UseVisualStyleBackColor = false;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnInicio
             // 
