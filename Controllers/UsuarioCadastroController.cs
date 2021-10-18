@@ -1,3 +1,4 @@
+
 ﻿using check_health.Models;
 using check_health.Models.ModelCadastroeLogin;
 using System;
@@ -45,6 +46,36 @@ namespace check_health.Controllers
                     ErrorMessage = "Nome num padrão incorreto"
                 };
             }
+        }
+
+        public static Response CheckerSelect(string email, string senha, out UsuarioCadastro user)
+        {
+            user = new UsuarioCadastro();
+
+            if (!string.IsNullOrEmpty(email) && email.Length < 51)
+            {
+                if (!string.IsNullOrEmpty(senha) && senha.Length < 51)
+                {
+                    return UsuarioCadastroBD.Select(email, senha, out user);
+                }
+                else
+                {
+                    return new Response
+                    {
+                        Executed = false,
+                        ErrorMessage = "Senha está incorreta"
+                    };
+                }
+            }
+            else
+            {
+                return new Response
+                {
+                    Executed = false,
+                    ErrorMessage = "E-mail está incorreto"
+                };
+            }
+
         }
     }
 }

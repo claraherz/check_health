@@ -1,6 +1,4 @@
-﻿using check_health.Models;
-using check_health.Models.ModelCadastroeLogin;
-using check_health.Views;
+﻿using check_health.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +13,6 @@ namespace check_health
 {
     public partial class FormCheckHealth : Form
     {
-        public UsuarioLogin user;
-        
         public FormCheckHealth()
         {
             InitializeComponent();
@@ -42,11 +38,6 @@ namespace check_health
             {
                 esconderSubMenu();
                 subMenu.Visible = true;
-                if (!string.IsNullOrEmpty(LoginAtual.Email) && btnConsultas.Visible == false && btnAgendamento.Visible == false)
-                {
-                    btnConsultas.Visible = true;
-                    btnAgendamento.Visible = true;
-                }
             }
             else
             {
@@ -77,32 +68,32 @@ namespace check_health
 
         private void btnQuemSomos_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new QuemSomos());
+            //*abre outro form*
             esconderSubMenu();
         }
 
         private void btnColaboradores_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new Colaboradores());
+            //*abre outro form*
             esconderSubMenu();
         }
 
         private void btnFaleConosco_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new FaleConosco());
+            //*abre outro form*
             esconderSubMenu();
         }
 
+        private void btnPrivacidade_Click(object sender, EventArgs e)
+        {
+            //*abre outro form*
+            esconderSubMenu();
+        }
         #endregion
 
         #region Paciente
         private void btnPaciente_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(LoginAtual.Email) && btnConsultas.Visible == false && btnAgendamento.Visible == false)
-            {
-                btnConsultas.Visible = true;
-                btnAgendamento.Visible = true;
-            }
             mostrarSubMenu(painelPaciente);
         }
 
@@ -120,7 +111,7 @@ namespace check_health
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new Consultas());
+            //*abre outro form*
             esconderSubMenu();
         }
 
@@ -130,11 +121,5 @@ namespace check_health
             esconderSubMenu();
         }
         #endregion
-
-        private void FormCheckHealth_Load(object sender, EventArgs e)
-        {
-            btnConsultas.Visible = false;
-            btnAgendamento.Visible = false;      
-        }
     }
 }

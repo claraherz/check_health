@@ -1,5 +1,4 @@
-﻿using check_health.Models.ModelCadastroeLogin;
-using System;
+﻿using System;
 using check_health.Controllers;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace check_health.Models
 {
-    public class UsuarioLoginBD
+    public class EspecialidadeModel
     {
         public static Response ExceptionGet(Exception e)
         {
@@ -17,6 +16,8 @@ namespace check_health.Models
                 ConnectionString.Connection.Close();
             }
 
+
+
             return new Response
             {
                 Executed = false,
@@ -24,40 +25,33 @@ namespace check_health.Models
                 Exception = e
             };
         }
-        /// <summary>
-        /// confere se existe o usuario no banco de dados
-        /// </summary>
-        /// <param name="email"></param>
-        /// <param name="senha"></param>
-        /// <param name="user"></param>
-        /// <returns></returns>
-        public static Response Select(string email, string senha, out UsuarioLogin user)
+
+
+
+        ///<summary>
+        /// a função preenche a lista nome
+        ///</summary>
+        public static Response MedicoSelect(string especialidade, List<string> nome)
         {
-            user = new UsuarioLogin();
-            string select = $"SELECT * from dbo.Paciente WHERE Email = '{email}' and  Senha = '{senha}'";
+            string select = $"SELECT Nome from dbo.Medico WHERE Especialidade = '{especialidade}'";
             SqlCommand cmd = new SqlCommand(select, ConnectionString.Connection);
 
             try
             {
                 ConnectionString.Connection.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    user.idPaciente = Convert.ToInt32(dr[0]);
-                }
-                ConnectionString.Connection.Close();
 
-                if (user.idPaciente != 0)
+
+
+                while (dr.Read())
                 {
-                    return new Response
-                    {
-                        Executed = true
-                    };
+                    nome.Add(dr[1].ToString());
                 }
-                else
+                return new Response
                 {
-                    throw new Exception();
-                }
+                    Executed = true
+                };
+
             }
             catch (Exception e)
             {

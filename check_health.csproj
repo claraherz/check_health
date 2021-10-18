@@ -69,6 +69,12 @@
     <Compile Include="Views\Consultas.Designer.cs">
       <DependentUpon>Consultas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FaleConosco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FaleConosco.Designer.cs">
+      <DependentUpon>FaleConosco.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\QuemSomos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\QuemSomos.Designer.cs">
+      <DependentUpon>QuemSomos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -107,11 +119,17 @@
     <EmbeddedResource Include="Views\Consultas.resx">
       <DependentUpon>Consultas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FaleConosco.resx">
+      <DependentUpon>FaleConosco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\QuemSomos.resx">
+      <DependentUpon>QuemSomos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

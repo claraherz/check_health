@@ -1,5 +1,4 @@
-﻿using check_health.Models.ModelCadastroeLogin;
-using System;
+﻿using System;
 using check_health.Controllers;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace check_health.Models
 {
-    public class UsuarioLoginBD
+    public class ConsultaBD
     {
         public static Response ExceptionGet(Exception e)
         {
@@ -17,6 +16,8 @@ namespace check_health.Models
                 ConnectionString.Connection.Close();
             }
 
+
+
             return new Response
             {
                 Executed = false,
@@ -24,30 +25,23 @@ namespace check_health.Models
                 Exception = e
             };
         }
-        /// <summary>
-        /// confere se existe o usuario no banco de dados
-        /// </summary>
-        /// <param name="email"></param>
-        /// <param name="senha"></param>
-        /// <param name="user"></param>
-        /// <returns></returns>
-        public static Response Select(string email, string senha, out UsuarioLogin user)
+
+        public static Response ConsultaSelect(Consulta dados)
         {
-            user = new UsuarioLogin();
-            string select = $"SELECT * from dbo.Paciente WHERE Email = '{email}' and  Senha = '{senha}'";
+            string select = $"SELECT * from dbo.Consulta WHERE idConsulta IS NOT NULL";
             SqlCommand cmd = new SqlCommand(select, ConnectionString.Connection);
 
             try
             {
                 ConnectionString.Connection.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
+                while (dr.Read())
                 {
-                    user.idPaciente = Convert.ToInt32(dr[0]);
+                    dados.idPaciente = Convert.ToInt32(dr[6]);
                 }
                 ConnectionString.Connection.Close();
 
-                if (user.idPaciente != 0)
+                if (dados.idConsulta != 0)
                 {
                     return new Response
                     {
@@ -56,8 +50,29 @@ namespace check_health.Models
                 }
                 else
                 {
-                    throw new Exception();
+                    return ConsultaInsert(dados);
                 }
+            }
+            catch (Exception e)
+            {
+
+                return ExceptionGet(e);
+            }
+        }
+        public static Response ConsultaInsert(Consulta dados)
+        {
+            string insert = $"INSERT into dbo.Consulta(DataConsulta,Horario,Profissional,Especialidade, idPaciente, idMedico) values('{dados.DataConsulta}','{dados.Horario}','{dados.Profissional}','{dados.Especialidade}')";
+
+            SqlCommand cmd = new SqlCommand(insert, ConnectionString.Connection);
+            try
+            {
+                ConnectionString.Connection.Open();
+                cmd.ExecuteNonQuery();
+                ConnectionString.Connection.Close();
+                return new Response
+                {
+                    Executed = true
+                };
             }
             catch (Exception e)
             {

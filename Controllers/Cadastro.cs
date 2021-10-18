@@ -1,5 +1,4 @@
-﻿using check_health.Controllers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using check_health.Controllers;
 
 namespace check_health.Views
 {
@@ -18,15 +18,16 @@ namespace check_health.Views
             InitializeComponent();
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
+        private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             Controller.CadastroDados(txtNome.Text, txtEmail.Text, txtSenha.Text);
 
+            new Agendamento().Show();
             this.Hide();
         }
     }
