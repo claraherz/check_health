@@ -179,7 +179,7 @@
             // 
             // picFundo
             // 
-            this.picFundo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picFundo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picFundo.Image = ((System.Drawing.Image)(resources.GetObject("picFundo.Image")));
             this.picFundo.Location = new System.Drawing.Point(0, 0);
             this.picFundo.Name = "picFundo";

@@ -96,7 +96,6 @@ namespace check_health.Views
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Consultas";
             this.Text = "Consultas";
-            this.Load += new System.EventHandler(this.Consultas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgConsultas)).EndInit();
             this.ResumeLayout(false);
 

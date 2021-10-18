@@ -288,7 +288,7 @@ namespace check_health
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // FormCheckHealth
+            // FormCheckHealth1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -298,8 +298,9 @@ namespace check_health
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(950, 600);
-            this.Name = "FormCheckHealth";
+            this.Name = "FormCheckHealth1";
             this.Text = "Check Health";
+            this.Load += new System.EventHandler(this.FormCheckHealth_Load);
             this.painelLateral.ResumeLayout(false);
             this.painelPaciente.ResumeLayout(false);
             this.painelSobreNos.ResumeLayout(false);
