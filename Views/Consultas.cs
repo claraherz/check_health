@@ -16,10 +16,5 @@ namespace check_health.Views
         {
             InitializeComponent();
         }
-
-        private void Consultas_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

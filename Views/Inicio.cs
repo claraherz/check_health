@@ -74,13 +74,19 @@ namespace check_health
 
         private void btnColaboradores_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new Colaboradores());
+            //*abre outro form*
             esconderSubMenu();
         }
 
         private void btnFaleConosco_Click(object sender, EventArgs e)
         {
             abrirChildForm(new FaleConosco());
+            esconderSubMenu();
+        }
+
+        private void btnPrivacidade_Click(object sender, EventArgs e)
+        {
+            //*abre outro form*
             esconderSubMenu();
         }
         #endregion
@@ -105,7 +111,7 @@ namespace check_health
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new Consultas());
+            //*abre outro form*
             esconderSubMenu();
         }
 
