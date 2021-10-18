@@ -1,4 +1,5 @@
-using check_health.Models;
+
+﻿using check_health.Models;
 using check_health.Models.ModelCadastroeLogin;
 using System;
 using System.Collections.Generic;
@@ -46,5 +47,189 @@ namespace check_health.Controllers
                 };
             }
         }
+
+        public static Response CheckerSelect(string email, string senha, out UsuarioCadastro user)
+        {
+            user = new UsuarioCadastro();
+
+            if (!string.IsNullOrEmpty(email) && email.Length < 51)
+            {
+                if (!string.IsNullOrEmpty(senha) && senha.Length < 51)
+                {
+                    return UsuarioCadastroBD.Select(email, senha, out user);
+                }
+                else
+                {
+                    return new Response
+                    {
+                        Executed = false,
+                        ErrorMessage = "Senha está incorreta"
+                    };
+                }
+            }
+            else
+            {
+                return new Response
+                {
+                    Executed = false,
+                    ErrorMessage = "E-mail está incorreto"
+                };
+            }
+
+        }
     }
 }
+                }
+                else
+                {
+                    return new Response
+                    {
+                        Executed = false,
+                        ErrorMessage = "E-mail num padrão incorreto"
+                    };
+                }
+            }
+            else
+            {
+                return new Response
+                {
+                    Executed = false,
+                    ErrorMessage = "Nome num padrão incorreto"
+                };
+            }
+        }
+    }
+}
+>>>>>>> 01a15d8919aae7db7558a17afe27a15b9a80699c
+                }
+                else
+                {
+                    return new Response
+                    {
+                        Executed = false,
+                        ErrorMessage = "E-mail num padrão incorreto"
+                    };
+                }
+            }
+            else
+            {
+                return new Response
+                {
+                    Executed = false,
+                    ErrorMessage = "Nome num padrão incorreto"
+                };
+            }
+        }
+    }
+}
+>>>>>>> 01a15d8919aae7db7558a17afe27a15b9a80699c
+                }
+                else
+                {
+                    return new Response
+                    {
+                        Executed = false,
+                        ErrorMessage = "E-mail num padrão incorreto"
+                    };
+                }
+            }
+            else
+            {
+                return new Response
+                {
+                    Executed = false,
+                    ErrorMessage = "Nome num padrão incorreto"
+                };
+            }
+        }
+    }
+}
+>>>>>>> 01a15d8919aae7db7558a17afe27a15b9a80699c
+                }
+                else
+                {
+                    return new Response
+                    {
+                        Executed = false,
+                        ErrorMessage = "E-mail num padrão incorreto"
+                    };
+                }
+            }
+            else
+            {
+                return new Response
+                {
+                    Executed = false,
+                    ErrorMessage = "Nome num padrão incorreto"
+                };
+            }
+        }
+    }
+}
+>>>>>>> 01a15d8919aae7db7558a17afe27a15b9a80699c
+                }
+                else
+                {
+                    return new Response
+                    {
+                        Executed = false,
+                        ErrorMessage = "E-mail num padrão incorreto"
+                    };
+                }
+            }
+            else
+            {
+                return new Response
+                {
+                    Executed = false,
+                    ErrorMessage = "Nome num padrão incorreto"
+                };
+            }
+        }
+    }
+}
+>>>>>>> 01a15d8919aae7db7558a17afe27a15b9a80699c
+                }
+                else
+                {
+                    return new Response
+                    {
+                        Executed = false,
+                        ErrorMessage = "E-mail num padrão incorreto"
+                    };
+                }
+            }
+            else
+            {
+                return new Response
+                {
+                    Executed = false,
+                    ErrorMessage = "Nome num padrão incorreto"
+                };
+            }
+        }
+    }
+}
+>>>>>>> 01a15d8919aae7db7558a17afe27a15b9a80699c
+                }
+                else
+                {
+                    return new Response
+                    {
+                        Executed = false,
+                        ErrorMessage = "E-mail num padrão incorreto"
+                    };
+                }
+            }
+            else
+            {
+                return new Response
+                {
+                    Executed = false,
+                    ErrorMessage = "Nome num padrão incorreto"
+                };
+            }
+        }
+    }
+}
+>>>>>>> 01a15d8919aae7db7558a17afe27a15b9a80699c
