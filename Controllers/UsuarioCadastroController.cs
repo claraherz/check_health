@@ -1,5 +1,5 @@
 
-﻿using check_health.Models;
+using check_health.Models;
 using check_health.Models.ModelCadastroeLogin;
 using System;
 using System.Collections.Generic;
@@ -18,6 +18,8 @@ namespace check_health.Controllers
                 {
                     if (!string.IsNullOrEmpty(user.Senha) && user.Senha.Length < 51)
                     {
+                        int a = 0;
+                        Execute(a);
                         return UsuarioCadastroBD.Insert(user);
                     }
                     else
@@ -48,34 +50,11 @@ namespace check_health.Controllers
             }
         }
 
-        public static Response CheckerSelect(string email, string senha, out UsuarioCadastro user)
+        public static int Execute(int a)
         {
-            user = new UsuarioCadastro();
+            a = 1;
 
-            if (!string.IsNullOrEmpty(email) && email.Length < 51)
-            {
-                if (!string.IsNullOrEmpty(senha) && senha.Length < 51)
-                {
-                    return UsuarioCadastroBD.Select(email, senha, out user);
-                }
-                else
-                {
-                    return new Response
-                    {
-                        Executed = false,
-                        ErrorMessage = "Senha está incorreta"
-                    };
-                }
-            }
-            else
-            {
-                return new Response
-                {
-                    Executed = false,
-                    ErrorMessage = "E-mail está incorreto"
-                };
-            }
-
+            return a;
         }
     }
 }

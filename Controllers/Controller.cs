@@ -39,30 +39,6 @@ namespace check_health.Controllers
             UsuarioCadastroController.CheckerInsert(user);
         }
 
-        public static void VerificaCadastro(string a, string b, string c, out UsuarioCadastro user)
-        {
-            user = new UsuarioCadastro();
-
-            user.Nome = a;
-            user.Email = b;
-            user.Senha = c;
-
-            UsuarioCadastroController.CheckerSelect(a, b, out user);
-
-            try
-            {
-                if (user.idPaciente == 0)
-                {
-                    CadastroDados(a, b, c);
-                }
-            }
-            catch (Exception e)
-            {
-                ExceptionGet(e);
-            }
-
-        }
-
         public static void LoginDados(string a, string b, out UsuarioLogin user)
         {
             user = new UsuarioLogin();
@@ -88,16 +64,31 @@ namespace check_health.Controllers
             DataeHora.HoraConsulta(hora);
         }
 
-        public static void ConsultaController(Consulta dados)
+        public static void ConsultaController(string data, string horario, string profissional, string especialidade)
         {
-            dados = new Consulta();
 
-            ConsultaBD.ConsultaInsert(dados);
+            ConsultaBD.ConsultaInsert(data, horario, profissional, especialidade);
         }
 
         public static void ComboDia(List<int>dia)
         {
             DataeHora.ComboDia(dia);
+        }
+
+        public static void ComboAno(List<int> ano)
+        {
+            DataeHora.ComboAno(ano);
+        }
+
+        public static void ComboMes(List<string> mes)
+        {
+            DataeHora.ComboMes(mes);
+        }
+
+        public static int Execute(int a)
+        {
+            UsuarioCadastroController.Execute(a);
+            return a;
         }
     }
 }
