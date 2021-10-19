@@ -8,6 +8,6 @@ namespace check_health.Models
 {
     public static class ConnectionString
     {
-        public static SqlConnection Connection { get; } = new SqlConnection("Data Source=localhost;Initial Catalog=tempdb;Integrated Security=True");
+        public static SqlConnection Connection { get; } = new SqlConnection("Data Source=bue205d14;Initial Catalog=BDMariaClara;Persist Security Info=True;User ID=guest01;Password=@Senac2021");
     }
 }

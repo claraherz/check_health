@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using check_health.Controllers;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
@@ -60,7 +61,8 @@ namespace check_health.Models
         }
         public static Response ConsultaInsert(Consulta dados)
         {
-            string insert = $"INSERT into dbo.Consulta(DataConsulta,Horario,Profissional,Especialidade, idPaciente, idMedico) values('{dados.DataConsulta}','{dados.Horario}','{dados.Profissional}','{dados.Especialidade}')";
+            dados = new Consulta();
+            string insert = $"INSERT into dbo.Consulta(DataConsulta,Horario,Profissional,Especialidade) values('{dados.DataConsulta}','{dados.Horario}','{dados.Profissional}','{dados.Especialidade}')";
 
             SqlCommand cmd = new SqlCommand(insert, ConnectionString.Connection);
             try

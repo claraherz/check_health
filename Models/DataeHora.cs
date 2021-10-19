@@ -16,5 +16,16 @@ namespace check_health.Models
             hora.Add("11h00");
             hora.Add("12h00");
         }
+
+        public static void ComboDia(List<int> dia)
+        {
+            int dias = 1;
+
+            for (int  i = 0;  i < 31;  i++)
+            {
+                dia.Add(dias);
+                dias++;
+            }
+        }
     }
 }
