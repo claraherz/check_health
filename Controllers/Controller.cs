@@ -88,5 +88,16 @@ namespace check_health.Controllers
             DataeHora.HoraConsulta(hora);
         }
 
+        public static void ConsultaController(Consulta dados)
+        {
+            dados = new Consulta();
+
+            ConsultaBD.ConsultaInsert(dados);
+        }
+
+        public static void ComboDia(List<int>dia)
+        {
+            DataeHora.ComboDia(dia);
+        }
     }
 }
