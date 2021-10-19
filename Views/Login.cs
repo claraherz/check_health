@@ -33,7 +33,7 @@ namespace check_health.Views
             if (user.idPaciente != 0)
             {
                 LoginAtual.Email = txtEmail.Text.ToString();
-                MessageBox.Show(LoginAtual.Email);
+                MessageBox.Show("Login efetuado!");
 
                 this.Hide();
             }
