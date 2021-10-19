@@ -16,8 +16,6 @@ namespace check_health.Models
                 ConnectionString.Connection.Close();
             }
 
-
-
             return new Response
             {
                 Executed = false,
@@ -26,43 +24,42 @@ namespace check_health.Models
             };
         }
 
-        public static Response ConsultaSelect(Consulta dados)
+        //public static Response ConsultaSelect(Consulta dados)
+        //{
+        //    string select = $"SELECT * from dbo.Consulta WHERE idConsulta IS NOT NULL";
+        //    SqlCommand cmd = new SqlCommand(select, ConnectionString.Connection);
+
+        //    try
+        //    {
+        //        ConnectionString.Connection.Open();
+        //        SqlDataReader dr = cmd.ExecuteReader();
+        //        while (dr.Read())
+        //        {
+        //            dados.idPaciente = Convert.ToInt32(dr[6]);
+        //        }
+        //        ConnectionString.Connection.Close();
+
+        //        if (dados.idConsulta != 0)
+        //        {
+        //            return new Response
+        //            {
+        //                Executed = true
+        //            };
+        //        }
+        //        else
+        //        {
+        //            return ConsultaInsert(dados);
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+
+        //        return ExceptionGet(e);
+        //    }
+        //}
+        public static Response ConsultaInsert(string datas, string horario, string profissional, string especialidade)
         {
-            string select = $"SELECT * from dbo.Consulta WHERE idConsulta IS NOT NULL";
-            SqlCommand cmd = new SqlCommand(select, ConnectionString.Connection);
-
-            try
-            {
-                ConnectionString.Connection.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    dados.idPaciente = Convert.ToInt32(dr[6]);
-                }
-                ConnectionString.Connection.Close();
-
-                if (dados.idConsulta != 0)
-                {
-                    return new Response
-                    {
-                        Executed = true
-                    };
-                }
-                else
-                {
-                    return ConsultaInsert(dados);
-                }
-            }
-            catch (Exception e)
-            {
-
-                return ExceptionGet(e);
-            }
-        }
-        public static Response ConsultaInsert(Consulta dados)
-        {
-            dados = new Consulta();
-            string insert = $"INSERT into dbo.Consulta(DataConsulta,Horario,Profissional,Especialidade) values('{dados.DataConsulta}','{dados.Horario}','{dados.Profissional}','{dados.Especialidade}')";
+            string insert = $"INSERT into dbo.Consulta(DataConsulta,Horario,Profissional,Especialidade, idMedico, idPaciente) values('{datas}','{horario}','{profissional}','{especialidade}')";
 
             SqlCommand cmd = new SqlCommand(insert, ConnectionString.Connection);
             try

@@ -44,6 +44,7 @@ namespace check_health.Models
                 {
                     nome.Add(dr[0].ToString());
                 }
+                ConnectionString.Connection.Close();
                 
                 return new Response
                 {
