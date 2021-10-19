@@ -29,11 +29,12 @@ namespace check_health.Views
         {
             UsuarioLogin user = new UsuarioLogin();
             Controller.LoginDados(txtEmail.Text, txtSenha.Text, out user);
+            int id = Convert.ToInt32(user.idPaciente);
 
             if (user.idPaciente != 0)
             {
                 LoginAtual.Email = txtEmail.Text.ToString();
-                MessageBox.Show("Login efetuado!");
+                MessageBox.Show(LoginAtual.Email);
 
                 this.Hide();
             }

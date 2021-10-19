@@ -16,5 +16,15 @@ namespace check_health.Views
         {
             InitializeComponent();
         }
+
+        private void dgConsultas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Consultas_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

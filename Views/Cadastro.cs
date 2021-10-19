@@ -26,8 +26,17 @@ namespace check_health.Views
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             Controller.CadastroDados(txtNome.Text, txtEmail.Text, txtSenha.Text);
-            MessageBox.Show("Cadastro efetuado");
-            this.Hide();
+            int confirma = 0;
+            Controller.Execute(confirma);
+            if (confirma == 1)
+            {
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario num padrão incorreto");
+            }
+
         }
     }
 }

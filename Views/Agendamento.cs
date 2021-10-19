@@ -12,30 +12,21 @@ namespace check_health.Views
             InitializeComponent();
         }
 
-        private void btnConfirma_Click(object sender, EventArgs e)
-        {
-            comboBoxHorario.Items.Remove(comboBoxHorario.SelectedItem);
-        }
-
         private void btnInicio_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void calendario_ValueChanged(object sender, EventArgs e)
+        private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            comboBoxHorario.Items.Clear();
+            string data = comboBoxDia.Text + " de " + comboboxMes.Text;
+            Controller.ConsultaController(data, comboBoxHorario.Text, comboBoxProfissional.Text, comboBoxEspecialidade.Text);
 
-            List<string> hora = new List<string>();
+            comboBoxHorario.Items.Remove(comboBoxHorario.SelectedItem);
 
-            Controller.HoraConsulta(hora);
-            foreach (var item in hora)
-            {
-                comboBoxHorario.Items.Add(item);
-            }
         }
 
-        private void Agendamento_Load_1(object sender, EventArgs e)
+        private void Agendamento_Load(object sender, EventArgs e)
         {
             List<string> especialidade = new List<string>();
             Controller.EspecialiadeController(especialidade);
@@ -43,6 +34,29 @@ namespace check_health.Views
             {
                 comboBoxEspecialidade.Items.Add(item);
             }
+            List<int> dia = new List<int>();
+            Controller.ComboDia(dia);
+
+            foreach (var item in dia)
+            {
+                comboBoxDia.Items.Add(item);
+            }
+
+            List<int> ano = new List<int>();
+            Controller.ComboAno(ano);
+
+            foreach (var item in ano)
+            {
+                comboboxAno.Items.Add(item);
+            }
+
+            List<string> mes = new List<string>();
+            Controller.ComboMes(mes);
+
+            foreach (var item in mes)
+            {
+                comboboxMes.Items.Add(item);
+            }
 
             List<string> hora = new List<string>();
 
@@ -51,12 +65,11 @@ namespace check_health.Views
             {
                 comboBoxHorario.Items.Add(item);
             }
-
         }
 
-        private void comboBoxEspecialidade_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void comboBoxEspecialidade_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBoxProfissional.Items.Clear(); 
+            comboBoxProfissional.Items.Clear();
 
             List<string> nome = new List<string>();
             Controller.MedicoController(comboBoxEspecialidade.Text, nome);
@@ -67,7 +80,7 @@ namespace check_health.Views
             }
         }
 
-        private void comboBoxHorario_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxProfissional_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
     }
