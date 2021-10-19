@@ -136,5 +136,10 @@ namespace check_health
             btnConsultas.Visible = false;
             btnAgendamento.Visible = false;      
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
