@@ -60,39 +60,15 @@ namespace check_health.Models
 
         public static List<string> EspecialidadeSelect(List<string> especialidade)
         {
-            //string select = $"SELECT Especialidade from dbo.Medico";
-            //SqlCommand cmd = new SqlCommand(select, ConnectionString.Connection);
-
-            //try
-            //{
-            //    ConnectionString.Connection.Open();
-            //    SqlDataReader dr = cmd.ExecuteReader();
-            //    while (dr.Read())
-            //    {
-            //        especialidade.Add(dr[0].ToString());
-            //    }
-            //    ConnectionString.Connection.Close();
-
-            //    return new Response
-            //    {
-            //        Executed = true
-            //    };
-
-            //}
-            //catch (Exception e)
-            //{
-            //    return ExceptionGet(e);
-            //}
-
-            especialidade.Add("Cardiologista");
-            especialidade.Add("Neurologista");
-            especialidade.Add("Dentista");
+            especialidade.Add("Cardiologista");//
+            especialidade.Add("Neurologista");//
+            especialidade.Add("Dentista");//
             especialidade.Add("Ortopedista");
             especialidade.Add("Pediatra");
-            especialidade.Add("Clinico Geral");
+            especialidade.Add("Clinico geral");
             especialidade.Add("Psicólogo");
             especialidade.Add("Fonoaudiólogo");
-            especialidade.Add("Gineclogista e obstetra");
+            especialidade.Add("Gineclogista e obstetra");//
 
             return especialidade;
         }

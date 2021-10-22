@@ -9,5 +9,7 @@ namespace check_health.Models
     public static class LoginAtual
     {
         public static string Email { get; set; }
+
+
     }
 }

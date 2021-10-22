@@ -59,7 +59,7 @@ namespace check_health.Models
         //}
         public static Response ConsultaInsert(string datas, string horario, string profissional, string especialidade)
         {
-            string insert = $"INSERT into dbo.Consulta(DataConsulta,Horario,Profissional,Especialidade, idMedico, idPaciente) values('{datas}','{horario}','{profissional}','{especialidade}')";
+            string insert = $"INSERT into dbo.Consulta(DataConsulta,HorarioConsulta,Profissional,Especialidade) values('{datas}','{horario}','{profissional}','{especialidade}')";
 
             SqlCommand cmd = new SqlCommand(insert, ConnectionString.Connection);
             try
@@ -71,6 +71,44 @@ namespace check_health.Models
                 {
                     Executed = true
                 };
+            }
+            catch (Exception e)
+            {
+                return ExceptionGet(e);
+            }
+        }
+
+        public static Response ConsultaSelect(Consulta dados)
+        {
+            string select = $"Select * from dbo.Consulta";
+
+            SqlCommand cmd = new SqlCommand(select, ConnectionString.Connection);
+
+            try
+            {
+                ConnectionString.Connection.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    dados.idConsulta = Convert.ToInt32(dr[0]);
+                    dados.DataConsulta = dr[1].ToString();
+                    dados.Horario = dr[2].ToString();
+                    dados.Profissional = dr[3].ToString();
+                    dados.Especialidade = dr[4].ToString();
+                }
+                ConnectionString.Connection.Close();
+
+                if (dados.idConsulta != 0)
+                {
+                    return new Response
+                    {
+                        Executed = true
+                    };
+                }
+                else
+                {
+                    throw new Exception();
+                }
             }
             catch (Exception e)
             {
