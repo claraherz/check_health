@@ -47,6 +47,9 @@ namespace check_health.Models
                 }
                 ConnectionString.Connection.Close();
 
+                //int id = 0;
+                //IdPaciente(id, user.idPaciente);
+
                 if (user.idPaciente != 0)
                 {
                     return new Response
@@ -64,5 +67,11 @@ namespace check_health.Models
                 return ExceptionGet(e);
             }
         }
+
+        //public static int IdPaciente(int id, int a)
+        //{
+        //    id = a;
+        //    return id;
+        //}
     }
 }
