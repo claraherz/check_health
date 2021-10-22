@@ -17,17 +17,18 @@ namespace check_health.Views
             this.Close();
         }
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        private void Agendamento_Load_1(object sender, EventArgs e)
         {
-            string data = comboBoxDia.Text + " de " + comboboxMes.Text;
-            Controller.ConsultaController(data, comboBoxHorario.Text, comboBoxProfissional.Text, comboBoxEspecialidade.Text);
 
-            comboBoxHorario.Items.Remove(comboBoxHorario.SelectedItem);
+            comboBoxProfissional.Items.Clear();
 
-        }
+            List<string> nome = new List<string>();
+            Controller.MedicoController(comboBoxEspecialidade.Text, nome);
 
-        private void Agendamento_Load(object sender, EventArgs e)
-        {
+            foreach (var item in nome)
+            {
+                comboBoxProfissional.Items.Add(item);
+            }
             List<string> especialidade = new List<string>();
             Controller.EspecialiadeController(especialidade);
             foreach (var item in especialidade)
@@ -47,7 +48,7 @@ namespace check_health.Views
 
             foreach (var item in ano)
             {
-                comboboxAno.Items.Add(item);
+                comboBoxAno.Items.Add(item);
             }
 
             List<string> mes = new List<string>();
@@ -55,7 +56,7 @@ namespace check_health.Views
 
             foreach (var item in mes)
             {
-                comboboxMes.Items.Add(item);
+                comboBoxMes.Items.Add(item);
             }
 
             List<string> hora = new List<string>();
@@ -65,6 +66,14 @@ namespace check_health.Views
             {
                 comboBoxHorario.Items.Add(item);
             }
+        }
+
+        private void btnConfirmar_Click_1(object sender, EventArgs e)
+        {
+            string data = comboBoxDia.Text + " de " + comboBoxMes.Text;
+            Controller.Consulta(data, comboBoxHorario.Text, comboBoxProfissional.Text, comboBoxEspecialidade.Text);
+            comboBoxHorario.Items.Remove(comboBoxHorario.SelectedItem);
+            this.Hide();
         }
 
         private void comboBoxEspecialidade_SelectedIndexChanged(object sender, EventArgs e)
@@ -78,10 +87,6 @@ namespace check_health.Views
             {
                 comboBoxProfissional.Items.Add(item);
             }
-        }
-
-        private void comboBoxProfissional_SelectedIndexChanged(object sender, EventArgs e)
-        {
         }
     }
 }

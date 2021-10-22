@@ -36,6 +36,7 @@ namespace check_health.Views
             // 
             // picColaboradores
             // 
+            this.picColaboradores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picColaboradores.Image = ((System.Drawing.Image)(resources.GetObject("picColaboradores.Image")));
             this.picColaboradores.Location = new System.Drawing.Point(0, 0);
             this.picColaboradores.Name = "picColaboradores";
@@ -52,7 +53,7 @@ namespace check_health.Views
             this.Controls.Add(this.picColaboradores);
             this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Colaboradores";
             this.Text = "Colaboradores";
             ((System.ComponentModel.ISupportInitialize)(this.picColaboradores)).EndInit();

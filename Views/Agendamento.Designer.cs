@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agendamento));
             this.comboBoxEspecialidade = new System.Windows.Forms.ComboBox();
             this.comboBoxProfissional = new System.Windows.Forms.ComboBox();
-            this.comboBoxData = new System.Windows.Forms.ComboBox();
+            this.comboBoxDia = new System.Windows.Forms.ComboBox();
             this.comboBoxHorario = new System.Windows.Forms.ComboBox();
             this.lblEspecialidade = new System.Windows.Forms.Label();
             this.lblProfissional = new System.Windows.Forms.Label();
@@ -41,6 +41,8 @@
             this.btnInicio = new System.Windows.Forms.Button();
             this.lblAgende = new System.Windows.Forms.Label();
             this.picFundo = new System.Windows.Forms.PictureBox();
+            this.comboBoxMes = new System.Windows.Forms.ComboBox();
+            this.comboBoxAno = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picFundo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +56,7 @@
             this.comboBoxEspecialidade.Name = "comboBoxEspecialidade";
             this.comboBoxEspecialidade.Size = new System.Drawing.Size(289, 25);
             this.comboBoxEspecialidade.TabIndex = 0;
+            this.comboBoxEspecialidade.SelectedIndexChanged += new System.EventHandler(this.comboBoxEspecialidade_SelectedIndexChanged);
             // 
             // comboBoxProfissional
             // 
@@ -64,14 +67,14 @@
             this.comboBoxProfissional.Size = new System.Drawing.Size(289, 25);
             this.comboBoxProfissional.TabIndex = 1;
             // 
-            // comboBoxData
+            // comboBoxDia
             // 
-            this.comboBoxData.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxData.FormattingEnabled = true;
-            this.comboBoxData.Location = new System.Drawing.Point(201, 315);
-            this.comboBoxData.Name = "comboBoxData";
-            this.comboBoxData.Size = new System.Drawing.Size(88, 25);
-            this.comboBoxData.TabIndex = 2;
+            this.comboBoxDia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxDia.FormattingEnabled = true;
+            this.comboBoxDia.Location = new System.Drawing.Point(201, 315);
+            this.comboBoxDia.Name = "comboBoxDia";
+            this.comboBoxDia.Size = new System.Drawing.Size(61, 25);
+            this.comboBoxDia.TabIndex = 2;
             // 
             // comboBoxHorario
             // 
@@ -147,6 +150,7 @@
             this.btnConfirmar.TabIndex = 8;
             this.btnConfirmar.Text = "Confirmar consulta";
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click_1);
             // 
             // btnInicio
             // 
@@ -181,11 +185,29 @@
             // 
             this.picFundo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picFundo.Image = ((System.Drawing.Image)(resources.GetObject("picFundo.Image")));
-            this.picFundo.Location = new System.Drawing.Point(0, 0);
+            this.picFundo.Location = new System.Drawing.Point(-1, -1);
             this.picFundo.Name = "picFundo";
             this.picFundo.Size = new System.Drawing.Size(684, 561);
             this.picFundo.TabIndex = 11;
             this.picFundo.TabStop = false;
+            // 
+            // comboBoxMes
+            // 
+            this.comboBoxMes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxMes.FormattingEnabled = true;
+            this.comboBoxMes.Location = new System.Drawing.Point(268, 315);
+            this.comboBoxMes.Name = "comboBoxMes";
+            this.comboBoxMes.Size = new System.Drawing.Size(135, 25);
+            this.comboBoxMes.TabIndex = 12;
+            // 
+            // comboBoxAno
+            // 
+            this.comboBoxAno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxAno.FormattingEnabled = true;
+            this.comboBoxAno.Location = new System.Drawing.Point(409, 315);
+            this.comboBoxAno.Name = "comboBoxAno";
+            this.comboBoxAno.Size = new System.Drawing.Size(81, 25);
+            this.comboBoxAno.TabIndex = 13;
             // 
             // Agendamento
             // 
@@ -193,6 +215,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(684, 561);
+            this.Controls.Add(this.comboBoxAno);
+            this.Controls.Add(this.comboBoxMes);
             this.Controls.Add(this.lblAgende);
             this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.btnConfirmar);
@@ -201,7 +225,7 @@
             this.Controls.Add(this.lblProfissional);
             this.Controls.Add(this.lblEspecialidade);
             this.Controls.Add(this.comboBoxHorario);
-            this.Controls.Add(this.comboBoxData);
+            this.Controls.Add(this.comboBoxDia);
             this.Controls.Add(this.comboBoxProfissional);
             this.Controls.Add(this.comboBoxEspecialidade);
             this.Controls.Add(this.picFundo);
@@ -210,6 +234,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Agendamento";
             this.Text = "Agendamento";
+            this.Load += new System.EventHandler(this.Agendamento_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.picFundo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,7 +245,7 @@
 
         private System.Windows.Forms.ComboBox comboBoxEspecialidade;
         private System.Windows.Forms.ComboBox comboBoxProfissional;
-        private System.Windows.Forms.ComboBox comboBoxData;
+        private System.Windows.Forms.ComboBox comboBoxDia;
         private System.Windows.Forms.ComboBox comboBoxHorario;
         private System.Windows.Forms.Label lblEspecialidade;
         private System.Windows.Forms.Label lblProfissional;
@@ -230,5 +255,7 @@
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Label lblAgende;
         private System.Windows.Forms.PictureBox picFundo;
+        private System.Windows.Forms.ComboBox comboBoxMes;
+        private System.Windows.Forms.ComboBox comboBoxAno;
     }
 }

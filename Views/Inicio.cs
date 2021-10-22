@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using check_health.Controllers;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -120,7 +121,7 @@ namespace check_health
 
         private void btnConsultas_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new Consultas());
+            abrirChildForm(new lblProfissional());
             esconderSubMenu();
         }
 
