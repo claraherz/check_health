@@ -10,6 +10,7 @@ namespace check_health.Controllers
 {
     public class UsuarioCadastroController
     {
+        public int idCadastro { get; set; }
         public static Response CheckerInsert(UsuarioCadastro user)
         {
             if (!string.IsNullOrEmpty(user.Nome) && user.Nome.Length < 51)
@@ -18,8 +19,6 @@ namespace check_health.Controllers
                 {
                     if (!string.IsNullOrEmpty(user.Senha) && user.Senha.Length < 51)
                     {
-                        int a = 0;
-                        Execute(a);
                         return UsuarioCadastroBD.Insert(user);
                     }
                     else
@@ -50,11 +49,6 @@ namespace check_health.Controllers
             }
         }
 
-        public static int Execute(int a)
-        {
-            a = 1;
-
-            return a;
-        }
+        
     }
 }

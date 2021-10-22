@@ -29,7 +29,7 @@ namespace check_health.Controllers
 
         public static void CadastroDados(string a, string b, string c)
         {
-            
+
             UsuarioCadastro user = new UsuarioCadastro();
 
             user.Nome = a;
@@ -64,13 +64,7 @@ namespace check_health.Controllers
             DataeHora.HoraConsulta(hora);
         }
 
-        public static void ConsultaController(string data, string horario, string profissional, string especialidade)
-        {
-
-            ConsultaBD.ConsultaInsert(data, horario, profissional, especialidade);
-        }
-
-        public static void ComboDia(List<int>dia)
+        public static void ComboDia(List<int> dia)
         {
             DataeHora.ComboDia(dia);
         }
@@ -85,10 +79,14 @@ namespace check_health.Controllers
             DataeHora.ComboMes(mes);
         }
 
-        public static int Execute(int a)
+        public static void Consulta(string data, string horario, string profissional, string especialidade)
         {
-            UsuarioCadastroController.Execute(a);
-            return a;
+            ConsultaBD.ConsultaInsert(data, horario, profissional, especialidade);
+        }
+
+        public static void SelectConsulta(Consulta dados)
+        {
+            ConsultaBD.ConsultaSelect(dados);
         }
     }
 }
